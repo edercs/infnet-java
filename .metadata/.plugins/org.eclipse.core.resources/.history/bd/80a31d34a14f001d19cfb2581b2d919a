@@ -1,0 +1,6 @@
+package br.edu.infnet.mypet.model.domain;
+
+public abstract class Servico {
+
+	public Double preco;
+}

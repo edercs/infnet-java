@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="br.edu.infnet.mypet.model.domain.Servico"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.ApplicationRunner"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.mypet.model.test.BanhoTeste"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.mypet.model.domain.Banho"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.mypet.model.domain.Consulta"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.mypet.TosaTeste"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.mypet.model.domain.Tosa"/>
+</qualifiedTypeNameHistroy>

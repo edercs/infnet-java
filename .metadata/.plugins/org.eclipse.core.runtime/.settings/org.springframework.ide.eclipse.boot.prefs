@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=2
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=appmypet
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=2.7.4
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=aplicativo para oferta de servi\u00E7os para pets
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=br.edu.infnet
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=11
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=AppMyPet
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=br.edu.infnet.mypet
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=1.0.0-SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n

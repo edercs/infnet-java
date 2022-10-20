@@ -1,0 +1,8 @@
+package br.edu.infnet.mypet.model.domain;
+
+public class Tosa extends Servico {
+
+	private String porteAnimal;
+	private int tipoTosa;
+	private String preco;
+}
