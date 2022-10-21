@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="br.edu.infnet.mypet.TosaTeste"/>
     <fullyQualifiedTypeName name="br.edu.infnet.mypet.model.domain.Tosa"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 </qualifiedTypeNameHistroy>
