@@ -1,5 +1,10 @@
 package br.edu.infnet.mypet.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tmedicamento")
 public class Medicamento extends Servico {
 
 	private String nome;

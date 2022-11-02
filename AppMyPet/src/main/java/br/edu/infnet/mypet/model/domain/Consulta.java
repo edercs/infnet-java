@@ -2,6 +2,11 @@ package br.edu.infnet.mypet.model.domain;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tconsulta")
 public class Consulta extends Servico {
 
 	private String raca;
