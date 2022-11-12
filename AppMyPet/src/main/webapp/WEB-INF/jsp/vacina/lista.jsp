@@ -5,30 +5,29 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<title>Cadastramento de Pedidos</title>
+	<title>Cadastro de Vacinas</title>
 </head>
 <body>
 	<div class="container mt-3">
-	  <h3>Pedidos: ${listagem.size()}</h3>
+	  <h3>Vacinas: ${listagem.size()}</h3>
 
 	  <table class="table table-striped">
 	    <thead>
 	      <tr>
 	        <th>ID</th>
-	        <th>Nome</th>
-	        <th>CPF</th>
-	        <th>E-mail</th>
+	        <th>Descrição</th>
+	        <th>Idade Indicada</th>
+	        <th>Tipo Animal</th>
 	        <th></th>
 	      </tr>
 	    </thead>
 	    <tbody>
-		  <c:forEach var="s" items="${listagem}">
+		  <c:forEach var="v" items="${listagem}">
 		      <tr>
-				<td>${s.id}</td>
-		        <td>${s.nome}</td>
-		        <td>${s.cpf}</td>
-		        <td>${s.email}</td>
-		        <td><a href="/solicitante/${s.id}/excluir">excluir</a></td>
+				<td>${v.descricao}</td>
+		        <td>${v.idadeIndicada}</td>
+		        <td>${v.tipoAnimal}</td>
+		        <td><a href="/vacina/${v.id}/excluir">excluir</a></td>
 		      </tr>
 	      </c:forEach>
 	    </tbody>

@@ -6,11 +6,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import br.edu.infnet.mypet.model.domain.Servico;
+import br.edu.infnet.mypet.model.domain.Pedido;
 
 @Repository
-public interface ServicoRepository extends CrudRepository<Servico, Integer> {
-
-	@Query("from Servico s where s.usuario.id =:userid")
-	List<Servico> obterLista(Integer userid);
+public interface PedidoRepository extends CrudRepository<Pedido, Integer> {
+	
+	@Query("from Pedido p where p.usuario.id =:userid")
+	List<Pedido> obterLista(Integer userid);
+	
 }

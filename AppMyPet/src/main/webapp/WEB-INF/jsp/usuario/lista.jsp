@@ -4,31 +4,33 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<title>Cadastro de Medicamentos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<title>Cadastro de Usuários</title>
 </head>
 <body>
+	<c:import url="/WEB-INF/jsp/menu.jsp"/>
+
 	<div class="container mt-3">
-	  <h3>Medicamentos: ${listagem.size()}</h3>
+	  <h3>Usuário: ${listagem.size()}</h3>
 
 	  <table class="table table-striped">
 	    <thead>
 	      <tr>
 	        <th>ID</th>
 	        <th>Nome</th>
-	        <th>Dosagem</th>
-	        <th>Modo de Uso</th>
+	        <th>E-mail</th>
+	        <th>Senha</th>
 	        <th></th>
 	      </tr>
 	    </thead>
 	    <tbody>
-		  <c:forEach var="medicamento" items="${listagem}">
+		  <c:forEach var="u" items="${listagem}">
 		      <tr>
-				<td>${medicamento.id}</td>
-		        <td>${medicamento.nome}</td>
-		        <td>${medicamento.dosagem}</td>
-		        <td>${medicamento.modoDeUso}</td>
-		        <td><a href="/medicamento/${s.id}/excluir">excluir</a></td>
+				<td>${u.id}</td>
+		        <td>${u.nome}</td>
+		        <td>${u.email}</td>
+		        <td>${u.senha}</td>
+		        <td><a href="/usuario/${u.id}/excluir">excluir</a></td>
 		      </tr>
 	      </c:forEach>
 	    </tbody>

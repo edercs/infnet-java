@@ -5,7 +5,7 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<title>Cadastramento de Pedidos</title>
+	<title>Cadastro de Pedidos</title>
 </head>
 <body>
 	<div class="container mt-3">
@@ -18,8 +18,8 @@
 	        <th>Descrição</th>
 	        <th>Data</th>
 	        <th>Web</th>
-	        <th>Solicitante</th>
-	        <th>Produtos</th>
+	        <th>Cliente</th>
+	        <th>Serviços</th>
 	        <th></th>
 	      </tr>
 	    </thead>
@@ -30,8 +30,8 @@
 		        <td>${p.descricao}</td>
 		        <td>${p.data}</td>
 		        <td>${p.web}</td>
-		        <td>${p.solicitante.nome}</td>
-		        <td>${p.produtos.size()}</td>
+		        <td>${p.cliente.nome}</td>
+		        <td>${p.servicos.size()}</td>
 		        <td><a href="/pedido/${p.id}/excluir">excluir</a></td>
 		      </tr>
 	      </c:forEach>

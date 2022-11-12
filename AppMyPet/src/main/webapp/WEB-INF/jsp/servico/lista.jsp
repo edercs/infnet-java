@@ -5,7 +5,7 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<title>Cadastramento de Serviços</title>
+	<title>Cadastro de Serviços</title>
 </head>
 <body>
 	<div class="container mt-3">
@@ -25,7 +25,7 @@
 		      <tr>
 				<td>${servico.id}</td>
 		        <td>${servico.porteAnimal}</td>
-		        <td>${s.preco}</td>
+		        <td>${servico.preco}</td>
 		        <td><a href="/servico/${servico.id}/excluir">excluir</a></td>
 		      </tr>
 	      </c:forEach>
