@@ -5,24 +5,24 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.edu.infnet.mypet.model.domain.Vacina;
-import br.edu.infnet.mypet.model.repository.VacinaRepository;
+import br.edu.infnet.mypet.model.domain.Consulta;
+import br.edu.infnet.mypet.model.repository.ConsultaRepository;
 
 @Service
 public class ConsultaService {
 	
 	@Autowired
-	private VacinaRepository vacinaRepository;
+	private ConsultaRepository consultaRepository;
 
-	public void incluir(Vacina vacina) {
-		vacinaRepository.save(vacina);
+	public void incluir(Consulta consulta) {
+		consultaRepository.save(consulta);
 	}
 	
 	public void excluir(Integer id) {
-		vacinaRepository.deleteById(id);
+		consultaRepository.deleteById(id);
 	}
 	
-	public Collection<Vacina> obterLista(){
-		return (Collection<Vacina>) vacinaRepository.findAll();
+	public Collection<Consulta> obterLista(){
+		return (Collection<Consulta>) consultaRepository.findAll();
 	}
 }

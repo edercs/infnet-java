@@ -28,7 +28,7 @@ public class PedidoController {
 	@GetMapping(value = "/pedido")
 	public String telaCadastro(Model model, @SessionAttribute("user") Usuario usuario) {
 
-		model.addAttribute("clientes", clienteService.obterLista(usuario));
+		model.addAttribute("clientes", clienteService.obterLista(usuario.getId()));
 
 		model.addAttribute("servicos", servicoService.obterLista(usuario));
 		

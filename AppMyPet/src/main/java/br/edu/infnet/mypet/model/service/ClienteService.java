@@ -5,29 +5,28 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.edu.infnet.mypet.clients.IClienteClient;
 import br.edu.infnet.mypet.model.domain.Cliente;
-import br.edu.infnet.mypet.model.domain.Usuario;
-import br.edu.infnet.mypet.model.repository.ClienteRepository;
 
 @Service
 public class ClienteService {
 	
 	@Autowired
-	private ClienteRepository clienteRepository;
+	private IClienteClient clienteClient; 
 
 	public void incluir(Cliente cliente) {
-		clienteRepository.save(cliente);
+		clienteClient.incluir(cliente);
 	}
 	
 	public void excluir(Integer id) {
-		clienteRepository.deleteById(id);
+		clienteClient.excluir(id);
 	}
 	
 	public Collection<Cliente> obterLista(){
-		return (Collection<Cliente>) clienteRepository.findAll();
+		return (Collection<Cliente>) clienteClient.obterLista();
 	}
 	
-	public Collection<Cliente> obterLista(Usuario usuario){
-		return (Collection<Cliente>) clienteRepository.obterLista(usuario.getId());
+	public Collection<Cliente> obterLista(Integer idUsuario){
+		return (Collection<Cliente>) clienteClient.obterLista(idUsuario);
 	}
 }

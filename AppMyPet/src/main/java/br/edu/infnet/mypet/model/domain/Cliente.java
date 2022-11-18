@@ -16,7 +16,7 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private String endereco;
+	private String email;
 	private String telefone;
 	
 	@ManyToOne
@@ -35,11 +35,12 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getEndereco() {
-		return endereco;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getTelefone() {
 		return telefone;
@@ -53,9 +54,5 @@ public class Cliente {
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
-	@Override
-	public String toString() {
-		return id + ";" +  nome + ";" + endereco + ";" +  telefone;
 	}
 }

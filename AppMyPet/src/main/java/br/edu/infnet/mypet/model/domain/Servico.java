@@ -21,6 +21,7 @@ public abstract class Servico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private String descricao;
 	private String porteAnimal;
 	private Double preco;
 	
@@ -36,6 +37,13 @@ public abstract class Servico {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	public String getPorteAnimal() {
 		return porteAnimal;

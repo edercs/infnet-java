@@ -18,6 +18,7 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String senha;
+	
 	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "idendereco")
 	private Endereco endereco;
@@ -58,6 +59,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
 	public Endereco getEndereco() {
 		return endereco;
 	}
@@ -65,4 +67,5 @@ public class Usuario {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	
 }

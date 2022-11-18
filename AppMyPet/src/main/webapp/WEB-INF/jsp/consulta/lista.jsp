@@ -4,10 +4,12 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<title>Cadastro de Consultas</title>
 </head>
 <body>
+	<c:import url="/WEB-INF/jsp/menu.jsp"/>
+	
 	<div class="container mt-3">
 	  <h3>Consultas: ${listagem.size()}</h3>
 
@@ -15,8 +17,11 @@
 	    <thead>
 	      <tr>
 	        <th>ID</th>
-	        <th>Raça</th>
-	        <th>Local</th>
+	        <th>Nome Veterinário</th>
+	        <th>Descrição</th>
+	        <th>Porte Animal</th>
+	        <th>Preço</th>
+	        <th>Local da Consulta</th>
 	        <th>Data da Consulta</th>
 	        <th></th>
 	      </tr>
@@ -25,7 +30,10 @@
 		  <c:forEach var="consulta" items="${listagem}">
 		      <tr>
 				<td>${consulta.id}</td>
-		        <td>${consulta.raca}</td>
+				<td>${consulta.veterinario}</td>
+				<td>${consulta.descricao}</td>
+			    <td>${consulta.porteAnimal}</td>
+		        <td>${consulta.preco}</td>
 		        <td>${consulta.local}</td>
 		        <td>${consulta.dataDaConsulta}</td>
 		        <td><a href="/consulta/${consulta.id}/excluir">excluir</a></td>

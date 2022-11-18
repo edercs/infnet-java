@@ -22,9 +22,11 @@ public class UsuarioTeste implements ApplicationRunner {
 		System.out.println("## Cadastramento de Usuários ##");
 		
 		Usuario u1 = new Usuario();
+		u1.setId(1);
 		u1.setEmail("admin@admin.com");
 		u1.setNome("Administrador");
 		u1.setSenha("123");
+		
 		usuarioService.incluir(u1);
 	}
 }

@@ -6,10 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "tendereco")
 public class Endereco {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -20,6 +20,7 @@ public class Endereco {
 	private String bairro;
 	private String localidade;
 	private String uf;
+	
 	
 	public Integer getId() {
 		return id;
@@ -62,5 +63,10 @@ public class Endereco {
 	}
 	public void setUf(String uf) {
 		this.uf = uf;
+	}
+	
+	@Override
+	public String toString() {
+		return cep + ";" + logradouro + ";" + complemento + ";" + bairro + ";" + localidade  + ";" + uf;
 	}
 }

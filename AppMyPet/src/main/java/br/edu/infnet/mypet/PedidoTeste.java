@@ -26,7 +26,7 @@ public class PedidoTeste implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("########## Cadastramento de Pedidos ##########");
+		System.out.println("####### Cadastramento de Pedidos #######");
 		
 		Usuario usuario = new Usuario();
 		usuario.setId(1);
@@ -45,6 +45,7 @@ public class PedidoTeste implements ApplicationRunner {
 		servicosDemaisPedidos.add(consulta);
 
 		Pedido p1 = new Pedido(c1);		
+		p1.setId(1);
 		p1.setDescricao("Primeiro pedido");
 		p1.setWeb(true);
 		p1.setServicos(servicosPrimeiroPedido);
@@ -52,6 +53,7 @@ public class PedidoTeste implements ApplicationRunner {
 		pedidoService.incluir(p1);
 		
 		Pedido p2 = new Pedido();
+		p1.setId(2);
 		p2.setDescricao("Segundo pedido");
 		p2.setWeb(false);
 		p2.setCliente(c1);
@@ -59,12 +61,10 @@ public class PedidoTeste implements ApplicationRunner {
 		p2.setUsuario(usuario);
 		pedidoService.incluir(p2);
 		
-		Cliente c2 = new Cliente();		
-		c2.setId(2);
-
 		Pedido p3 = new Pedido();
+		p3.setId(3);
 		p3.setDescricao("Terceiro pedido");
-		p3.setCliente(c2);
+		p3.setCliente(c1);
 		p3.setServicos(servicosDemaisPedidos);
 		p3.setUsuario(usuario);
 		pedidoService.incluir(p3);

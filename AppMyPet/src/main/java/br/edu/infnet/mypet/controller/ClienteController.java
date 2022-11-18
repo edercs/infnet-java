@@ -40,7 +40,7 @@ public class ClienteController {
 		
 		clienteService.incluir(cliente);
 		
-		return "redirect:/solicitante/lista";
+		return "redirect:/cliente/lista";
 	}
 	
 	@GetMapping(value = "/cliente")

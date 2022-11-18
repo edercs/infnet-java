@@ -1,6 +1,6 @@
 package br.edu.infnet.mypet.model.domain;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -9,16 +9,16 @@ import javax.persistence.Table;
 @Table(name = "tconsulta")
 public class Consulta extends Servico {
 
-	private String raca;
+	private String veterinario;
 	private String local;
-	private LocalDate dataDaConsulta;
+	private LocalDateTime dataDaConsulta;
 	
 	
-	public String getRaca() {
-		return raca;
+	public String getVeterinario() {
+		return veterinario;
 	}
-	public void setRaca(String raca) {
-		this.raca = raca;
+	public void setVeterinario(String veterinario) {
+		this.veterinario = veterinario;
 	}
 	public String getLocal() {
 		return local;
@@ -26,14 +26,14 @@ public class Consulta extends Servico {
 	public void setLocal(String local) {
 		this.local = local;
 	}
-	public LocalDate getDataDaConsulta() {
+	public LocalDateTime getDataDaConsulta() {
 		return dataDaConsulta;
 	}
-	public void setDataDaConsulta(LocalDate dataDaConsulta) {
+	public void setDataDaConsulta(LocalDateTime dataDaConsulta) {
 		this.dataDaConsulta = dataDaConsulta;
 	}
 	@Override
 	public String toString() {
-		return super.toString() + ";" + raca + ";" + local + ";" + dataDaConsulta;
+		return super.toString() + ";" + veterinario + ";" + local + ";" + dataDaConsulta;
 	}
 }

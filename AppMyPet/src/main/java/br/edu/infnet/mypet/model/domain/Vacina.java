@@ -7,16 +7,16 @@ import javax.persistence.Table;
 @Table(name = "tvacina")
 public class Vacina extends Servico {
 	
-	private String descricao;
+	private String tipo;
 	private String idadeIndicada;
 	private String tipoAnimal;
 	
 	
-	public String getDescricao() {
-		return descricao;
+	public String getTipo() {
+		return tipo;
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	public String getIdadeIndicada() {
 		return idadeIndicada;
@@ -33,6 +33,6 @@ public class Vacina extends Servico {
 
 	@Override
 	public String toString() {
-		return super.toString() + ";" + descricao + ";" + idadeIndicada + ";" + tipoAnimal;
+		return super.toString() + ";" + tipo + ";" + idadeIndicada + ";" + tipoAnimal;
 	}
 }

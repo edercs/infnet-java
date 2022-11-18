@@ -4,10 +4,12 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<title>Cadastro de Vacinas</title>
 </head>
 <body>
+	<c:import url="/WEB-INF/jsp/menu.jsp"/>
+	
 	<div class="container mt-3">
 	  <h3>Vacinas: ${listagem.size()}</h3>
 
@@ -16,6 +18,9 @@
 	      <tr>
 	        <th>ID</th>
 	        <th>Descrição</th>
+	        <th>Porte do Animal</th>
+	        <th>Preço</th>
+	        <th>Tipo</th>
 	        <th>Idade Indicada</th>
 	        <th>Tipo Animal</th>
 	        <th></th>
@@ -24,7 +29,11 @@
 	    <tbody>
 		  <c:forEach var="v" items="${listagem}">
 		      <tr>
-				<td>${v.descricao}</td>
+			    <td>${v.id}</td>
+			    <td>${v.descricao}</td>
+			    <td>${v.porteAnimal}</td>
+		        <td>${v.preco}</td>
+				<td>${v.tipo}</td>
 		        <td>${v.idadeIndicada}</td>
 		        <td>${v.tipoAnimal}</td>
 		        <td><a href="/vacina/${v.id}/excluir">excluir</a></td>
